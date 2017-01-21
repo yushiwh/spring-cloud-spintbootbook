@@ -1,12 +1,13 @@
+
 spring:
   application:
-    name: some
+    name: some #文件
   cloud:
     config:
       enabled: true
       discovery:
         enabled: true
-        service-id: CONFIG
+        service-id: CONFIG #Config服务
 eureka:
   instance:
     non-secure-port: ${server.port:8083}
