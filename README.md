@@ -1,5 +1,5 @@
 # spring-cloud-spintbootbook
-这是一个springboot上面的springcloud的列子
+这是一个springboot上面的springcloud的列子，最为简单的环境搭建，可以直接使用
 
 
 启动的顺序依次是
