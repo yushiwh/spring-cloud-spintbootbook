@@ -1,0 +1,1 @@
+这是一个配置服务器，用person-service和some-service提供外部的配置
