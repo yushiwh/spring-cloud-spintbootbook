@@ -1,3 +1,5 @@
+
+#配置其他应用的配置文件的位置位于类路径下的config目录下面，规则是应用名+profile.yml
 spring:
   cloud:
     config:
