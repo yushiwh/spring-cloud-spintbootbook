@@ -11,9 +11,15 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.wisely.ui.domain.Person;
 
+/**
+ * 在接口中声明方法即可调用Person服务的REST服务
+ * 
+ * @author yushi
+ *
+ */
 @FeignClient("person")
 public interface PersonService {
-	 @RequestMapping(method = RequestMethod.POST, value = "/save",
-	            produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
-	    @ResponseBody List<Person> save(@RequestBody String  name);
+	@RequestMapping(method = RequestMethod.POST, value = "/save", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
+	@ResponseBody
+	List<Person> save(@RequestBody String name);
 }

@@ -9,11 +9,11 @@ import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 
 @SpringBootApplication
 @EnableEurekaClient
-@EnableFeignClients //1
-@EnableCircuitBreaker //2
-@EnableZuulProxy //3
+@EnableFeignClients // 1开启feign客户端支持
+@EnableCircuitBreaker // 2开启CircuitBreaker的支持
+@EnableZuulProxy // 3开启网关代理的支持
 public class UiApplication {
 	public static void main(String[] args) {
-        SpringApplication.run(UiApplication.class, args);
-    }
+		SpringApplication.run(UiApplication.class, args);
+	}
 }

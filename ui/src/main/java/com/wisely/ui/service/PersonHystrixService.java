@@ -12,16 +12,17 @@ import com.wisely.ui.domain.Person;
 public class PersonHystrixService {
 
 	@Autowired
-	PersonService personService; 
+	PersonService personService;
 
-	@HystrixCommand(fallbackMethod = "fallbackSave") //1
+	// 1使用@HystrixCommand的fallbackMethod参数的指定，当本方法调用失败，调用后背方法fallbackSave
+	@HystrixCommand(fallbackMethod = "fallbackSave")
 	public List<Person> save(String name) {
 		return personService.save(name);
 	}
-	
-	public List<Person> fallbackSave(String name){ 
+
+	public List<Person> fallbackSave(String name) {
 		List<Person> list = new ArrayList<>();
-		Person p = new Person(name+"没有保存成功，Person Service 故障");
+		Person p = new Person(name + "没有保存成功，Person Service 故障");
 		list.add(p);
 		return list;
 	}
