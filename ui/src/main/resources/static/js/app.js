@@ -22,8 +22,8 @@ uiApp.controller("PersonController", function ($scope, $http) {
         $scope.people = "";
         $scope.errorMessage = "";
 
-    $scope.getMessageResponse = function(personName) {
-    	$http.post('/dispatch', personName).success(function(data){
+    $scope.getMessageResponse = function(personName,pcount) {
+    	$http.post('/dispatch/'+pcount, personName).success(function(data){
             $scope.people = data;
             $scope.errorMessage = "";
         }).error(function() {
