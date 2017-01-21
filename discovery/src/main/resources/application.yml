@@ -1,10 +1,12 @@
+
+#使用YAML的配置
 server:
-  port: 8761
+  port: 8761 #当前的eureka server的服务端口号
 
 eureka:
   instance:
-    hostname: localhost
+    hostname: localhost  #当前eureka  server的hostname为当前主机
   client:
-    register-with-eureka: false
+    register-with-eureka: false  #表示当前的服务不需要到eureka server上面进行注册
     fetch-registry: false
     
